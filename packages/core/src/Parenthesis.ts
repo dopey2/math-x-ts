@@ -1,5 +1,6 @@
 import MathNode, { MathNodeType } from "./MathNode";
 import Constant from "./Constant";
+import Fraction from "./Fraction";
 
 /**
  * Represent the parenthesis as a math node.
@@ -17,18 +18,17 @@ export default class Parenthesis extends MathNode {
         super();
         this.content = content;
     }
-    
+
     /**
      * @inheritDoc
      */
-    next(args?: any) {
+    next(args?: any): MathNode {
         const isNegative = args?.isNegative ?? false;
-
-        if(this.content instanceof Constant) {
-            return this.content;
+        if(this.content.type === MathNodeType.Constant) {
+            return this.content as MathNode;
         } else {
             const solvedParenthesis = this.content.next();
-            if(solvedParenthesis instanceof Constant && !isNegative) {
+            if(solvedParenthesis instanceof Constant && !isNegative || solvedParenthesis instanceof Fraction) {
                 return solvedParenthesis;
             }
             return new Parenthesis(solvedParenthesis);
