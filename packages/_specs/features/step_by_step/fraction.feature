@@ -216,3 +216,15 @@ Feature: Step by step fractions
     Then step 2 should be "{15} / {4} * {1} / {3}"
     Then step 3 should be "{15 * 1} / {4 * 3}"
     Then step 4 should be "{15} / {12}"
+
+
+  Scenario: Expression "6 / 4 + ({3} / {2} * 2)"
+    Given the expression "6 / 4 + ({3} / {2} * 2)"
+    When the expression is parsed
+    Then the parsed expression should be isometric
+    Then step 0 should be "{6} / {4} + ({3} / {2} * 2)"
+    Then step 1 should be "{6} / {4} + {3 * 2} / {2 * 2}"
+    Then step 2 should be "{6} / {4} + {6} / {4}"
+    Then step 3 should be "{6 + 6} / {4}"
+    Then step 4 should be "{12} / {4}"
+    Then step 5 should be "3"
