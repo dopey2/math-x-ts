@@ -88,7 +88,16 @@ export default abstract class BaseOperation extends MathNode {
         }
 
         if(typeof rightOverride === "function") {
-            return rightOverride(this.left);
+            const nextStep = rightOverride(this.left);
+
+            // inverse left and right operands
+            if(nextStep instanceof BaseOperation) {
+                const temp = nextStep.right;
+                nextStep.right = nextStep.left;
+                nextStep.left = temp;
+            }
+
+            return nextStep;
         }
 
         return this.concreteNext();
