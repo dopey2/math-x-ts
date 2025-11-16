@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "@math-x-ts/parser",
+  "name": "@math-x-ts/expressions",
   "version": "0.0.12",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",

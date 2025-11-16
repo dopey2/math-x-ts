@@ -1,6 +1,6 @@
 import React from 'react';
-import { parse } from '@math-x-ts/parser';
 import introJs from 'intro.js';
+import { parse } from '../../../expressions';
 import ExpressionSolver from './ExpressionSolver/ExpressionSolver';
 import LiveDemoTopBar from './LiveDemoTopBar/LiveDemoTopBar';
 import 'intro.js/introjs.css';
@@ -37,7 +37,7 @@ export default class SampleLiveDemo extends React.PureComponent {
 
     EXPRESSION_SOLVER: ExpressionSolver | null = null;
 
-    
+
     onClickNext = () => {
         this.EXPRESSION_SOLVER && this.EXPRESSION_SOLVER.solveNext();
     };
@@ -49,10 +49,10 @@ export default class SampleLiveDemo extends React.PureComponent {
     onExpressionChange = (expression) => {
         this.setState({ expression });
     };
-    
+
     onSelectedOutputChange = (tab) => {
         this.setState({ selectedOutput: tab });
-    }; 
+    };
 
     getMathNodeFromExpression = () => {
         let mathNode = null;
@@ -97,10 +97,10 @@ export default class SampleLiveDemo extends React.PureComponent {
             }
             ],
         }).start();
-        
+
         window.localStorage.setItem("demo", "true");
     }
-    
+
 
     render() {
 
