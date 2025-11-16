@@ -15,7 +15,7 @@
     "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
     "build:umd": "webpack --config webpack.config.js",
-    "build": "npm run clean:lib && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:umd",
+    "build": "npm run build:clean && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:umd",
     "typecheck": "tsc --noEmit",
     "lint": "eslint ./src/**/*",
     "lint:fix": "eslint ./src/**/* --fix",
