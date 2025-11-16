@@ -64,7 +64,10 @@ export default class Negative extends MathNode {
      * @inheritDoc
      */
     isEqual(mathNode: MathNode): boolean {
-        // @ts-ignore
-        return this.type === mathNode.type && this.content.isEqual(mathNode.content);
+        return (
+            this.type === mathNode.type
+            && mathNode instanceof Negative
+            && this.content.isEqual(mathNode.content)
+        );
     }
 }

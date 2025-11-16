@@ -71,7 +71,10 @@ export default class Constant extends MathNode implements ToFraction {
      * @inheritDoc
      */
     isEqual(mathNode: MathNode): boolean {
-        // @ts-ignore
-        return mathNode && this.type === mathNode.type && this.value === mathNode.value;
+        return (
+            this.type === mathNode.type
+            && mathNode instanceof Constant
+            && this.value === mathNode.value
+        );
     }
 }

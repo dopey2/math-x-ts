@@ -63,7 +63,11 @@ export default class Equal extends MathNode {
      * @inheritDoc
      */
     isEqual(mathNode: MathNode): boolean {
-        // @ts-ignore
-        return this.type === mathNode.type && this.left.isEqual(mathNode.left) && this.right.isEqual(mathNode.right);
+        return (
+            this.type === mathNode.type
+            && mathNode instanceof Equal
+            && this.left.isEqual(mathNode.left)
+            && this.right.isEqual(mathNode.right)
+        );
     }
 }

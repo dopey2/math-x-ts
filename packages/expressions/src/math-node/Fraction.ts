@@ -352,7 +352,11 @@ export default class Fraction extends MathNode implements ToFraction {
      * @inheritDoc
      */
     isEqual(mathNode: MathNode): boolean {
-        // @ts-ignore
-        return this.type === mathNode.type && this.n.isEqual(mathNode.n) && this.d.isEqual(mathNode.d);
+        return (
+            this.type === mathNode.type
+            && mathNode instanceof Fraction
+            && this.n.isEqual(mathNode.n)
+            && this.d.isEqual(mathNode.d)
+        );
     }
 }

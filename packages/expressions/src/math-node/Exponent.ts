@@ -73,9 +73,8 @@ export default class Exponent extends MathNode {
     isEqual(mathNode: MathNode): boolean {
         return (
             this.type === mathNode.type
-            // @ts-ignore
+            && mathNode instanceof Exponent
             && this.base.isEqual(mathNode.base)
-            // @ts-ignore
             && this.exponent.isEqual(mathNode.exponent)
         );
     }

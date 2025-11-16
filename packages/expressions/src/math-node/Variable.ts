@@ -59,7 +59,6 @@ export default class Variable extends MathNode {
      * @inheritDoc
      */
     isEqual(mathNode: MathNode): boolean {
-        // @ts-ignore
-        return this.type === mathNode.type && this.name === mathNode.name;
+        return this.type === mathNode.type && mathNode instanceof Variable && this.name === mathNode.name;
     }
 }

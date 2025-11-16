@@ -62,9 +62,13 @@ export default abstract class BaseOperation extends MathNode {
     /**
      * @inheritDoc
      */
-    isEqual(mathNode: MathNode): boolean {
-        // @ts-expect-error
-        return this instanceof MathNode && this.right.isEqual(mathNode.right) && this.left.isEqual(mathNode.left);
+    isEqual(mathNode: BaseOperation): boolean {
+        return (
+            this.type === mathNode.type
+            && this instanceof BaseOperation
+            && this.right.isEqual(mathNode.right)
+            && this.left.isEqual(mathNode.left)
+        );
     }
 
     /**
