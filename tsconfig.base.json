@@ -17,6 +17,7 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "experimentalDecorators": true
   },
   "ts-node": {
     "compilerOptions": {

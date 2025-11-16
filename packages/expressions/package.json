@@ -20,6 +20,7 @@
     "lint": "eslint ./src/**/*",
     "lint:fix": "eslint ./src/**/* --fix",
     "test": "jest --verbose",
+    "check:specs": "cucumber-js",
     "test:bundle": "jest --config ./jest.bundle.config.ts --detectOpenHandles --verbose",
     "check:all": "npm run check:types && npm run lint && npm run test",
     "npm:publish": "npm publish --access public"
