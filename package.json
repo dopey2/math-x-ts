@@ -5,8 +5,7 @@
   "description": "Math parser, AST builder for math expression & step by step solution",
   "workspaces": [
     "packages/expressions",
-    "packages/documentation",
-    "packages/_specs"
+    "packages/documentation"
   ],
   "scripts": {
     "postinstall": "husky install",
@@ -17,7 +16,6 @@
     "test": "npm run test --workspaces",
     "test:bundle": "npm run test:bundle --workspaces",
     "check:types": "npm run check:types --workspaces",
-    "check:specs": "npm run check:specs --workspace=packages/_specs",
     "coverage": "c8 npm run check:specs",
     "check:all": "npm run check:all --workspaces",
     "npm:publish": "npm run npm:publish --workspaces",
