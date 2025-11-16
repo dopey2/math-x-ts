@@ -27,8 +27,5 @@
     "coverage": "c8 npm run test",
     "npm:publish": "npm publish --access public"
   },
-  "dependencies": {
-    "@math-x-ts/core": "0.0.12"
-  },
   "license": "MIT"
 }
