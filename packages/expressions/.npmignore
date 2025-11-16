@@ -1,10 +1,11 @@
 src
-__test__
-__test_bundle_
+__tests_browser
+__tests_specs
+__tests_unit
 .idea
 .swc
 .eslintrc.json
-.jest.bundle.config.ts
+.jest.browser.config.ts
 .jest.config.ts
 tsconfig.json
 webpack.config.js

@@ -7,5 +7,5 @@ const packageJson = require("./package.json");
 export default {
     name: packageJson.name,
     displayName: packageJson.name,
-    rootDir: "__test_bundle__"
+    rootDir: "__tests_browser"
 };

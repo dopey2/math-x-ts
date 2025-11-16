@@ -10,19 +10,21 @@
     "lib/**/*"
   ],
   "scripts": {
-    "clean:lib": "rimraf lib",
-    "build:all": "npm run clean:lib && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:umd",
+    "build:clean": "rimraf lib",
     "build:types": "tsc --emitDeclarationOnly --declaration true --outDir lib/types",
     "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
     "build:umd": "webpack --config webpack.config.js",
-    "check:types": "tsc --noEmit",
+    "build": "npm run clean:lib && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:umd",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint ./src/**/*",
     "lint:fix": "eslint ./src/**/* --fix",
-    "test": "jest --verbose",
-    "check:specs": "cucumber-js",
-    "test:bundle": "jest --config ./jest.bundle.config.ts --detectOpenHandles --verbose",
-    "check:all": "npm run check:types && npm run lint && npm run test",
+    "test:unit": "jest --verbose",
+    "test:browser": "jest --config ./jest.browser.config.ts --detectOpenHandles --verbose",
+    "test:specs": "cucumber-js",
+    "test": "npm run test:unit && npm run test:specs && npm run test:browser",
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "coverage": "c8 npm run test",
     "npm:publish": "npm publish --access public"
   },
   "dependencies": {

@@ -4,7 +4,7 @@ __test_bundle_
 .idea
 .swc
 .eslintrc.json
-.jest.bundle.config.ts
+.jest.browser.config.ts
 .jest.config.ts
 tsconfig.json
 webpack.config.js

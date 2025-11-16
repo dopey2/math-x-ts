@@ -5,7 +5,6 @@ export default {
     ...baseConfig,
     name: packageJson.name,
     displayName: packageJson.name,
-    testPathIgnorePatterns: [
-        "__test_bundle__"
-    ]
+    testPathIgnorePatterns: [],
+    roots: ["__tests_unit"],
 };
