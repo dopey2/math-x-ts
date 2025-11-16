@@ -24,14 +24,14 @@ module.exports = {
         filename: production ? 'index.min.js' : 'index.js',
         path: path.resolve(__dirname, 'lib/umd'),
         globalObject: 'this',
-        library: 'MathXParser',
+        library: 'MathExpressions',
         libraryTarget: 'umd'
     },
     externals: {
         // Should not bundle any dependency of '@math-x-ts/core'
         // But instead look for global object 'MathXCore'
         // Defined in @math-x-ts/core/lib/umd/index.js
-        '@math-x-ts/core': 'MathXCore'
+        // '@math-x-ts/core': 'MathXCore'
     },
     optimization: {
         minimize: production,
