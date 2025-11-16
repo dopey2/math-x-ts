@@ -1,6 +1,4 @@
-import { Constant, Divide, MathNodeType } from "@math-x-ts/core/src";
-import { parse } from '@math-x-ts/parser/src';
-
+import { parse, Constant, Divide, MathNodeType } from "../../src";
 
 describe("Divide", () => {
     it("4 : 2", () => {
