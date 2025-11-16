@@ -5,7 +5,6 @@ __tests_unit
 .idea
 .swc
 .eslintrc.json
-.jest.browser.config.ts
 .jest.config.ts
 tsconfig.json
 webpack.config.js
