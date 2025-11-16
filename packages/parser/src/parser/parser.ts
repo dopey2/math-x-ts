@@ -9,7 +9,7 @@ import {
     Negative,
     Parenthesis,
     Subtract, Variable
-} from "@math-x-ts/core";
+} from "../math-node";
 
 import { normalize } from "./normalisation";
 import {

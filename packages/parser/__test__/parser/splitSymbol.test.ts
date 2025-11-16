@@ -1,4 +1,4 @@
-import { splitStringExpressionToSymbols } from "../src/utils";
+import { splitStringExpressionToSymbols } from "../../src/parser/utils";
 
 describe("Split expression to symbols", () => {
     it("case 1", () => {

@@ -1,5 +1,5 @@
-import { splitStringExpressionToSymbols } from "../src/utils";
-import { normalizeNegativeNumbers } from "../src/normalisation";
+import { splitStringExpressionToSymbols } from "../../src/parser/utils";
+import { normalizeNegativeNumbers } from "../../src/parser/normalisation";
 
 
 describe("Normalize negative numbers", () => {

@@ -1,4 +1,4 @@
-import { isInBracket, isInParenthesis, splitStringExpressionToSymbols } from "../src/utils";
+import { isInBracket, isInParenthesis, splitStringExpressionToSymbols } from "../../src/parser/utils";
 
 describe("Check if is in parenthesis", () => {
     it("case 1", () => {
