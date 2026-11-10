@@ -1,4 +1,4 @@
-import baseConfig from '../../jest.config.base';
+import baseConfig from '../../config/jest.config.base';
 const packageJson = require("./package.json");
 
 export default {
