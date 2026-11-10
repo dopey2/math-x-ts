@@ -9,7 +9,7 @@ describe("Multiplying constant", () => {
         expect(mathNode.isAtomic).toBe(false);
 
         expect(mathNode.toString()).toBe("1 * 1");
-        expect(mathNode.toTex()).toBe("1 * 1");
+        expect(mathNode.toTex()).toBe("1 \\times 1");
         expect(mathNode.toJson()).toEqual({
             type: MathNodeType.Multiply,
             left: {

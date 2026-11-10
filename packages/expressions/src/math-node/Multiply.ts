@@ -12,7 +12,7 @@ export default class Multiply extends BaseOperation {
      * @param {MathNode} right The right node.
      */
     constructor(left: MathNode, right: MathNode) {
-        super(left, right, MathNodeType.Multiply, "*");
+        super(left, right, MathNodeType.Multiply, "*", "\\times");
     }
 
     /**

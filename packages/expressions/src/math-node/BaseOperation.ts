@@ -13,6 +13,7 @@ export default abstract class BaseOperation extends MathNode {
     public right: MathNode;
 
     private readonly symbol!: string;
+    private readonly texSymbol!: string;
 
 
     /**
@@ -20,14 +21,16 @@ export default abstract class BaseOperation extends MathNode {
      * @param {MathNode} right - The right node.
      * @param {MathNodeType} type - The node type.
      * @param {string} symbol - The symbol of the operator.
+     * @param {string} texSymbol - The LaTeX symbol of the operator, defaults to `symbol`.
      */
-    constructor(left: MathNode, right: MathNode, type: MathNodeType, symbol: string) {
+    constructor(left: MathNode, right: MathNode, type: MathNodeType, symbol: string, texSymbol: string = symbol) {
         super();
         this.left = left;
         this.right = right;
 
         this.type = type;
         this.symbol = symbol;
+        this.texSymbol = texSymbol;
     }
 
     /**
@@ -56,7 +59,7 @@ export default abstract class BaseOperation extends MathNode {
     toTex(data?: ToStringParam) {
         const left = this.left.toTex({ isAfterOperator: data?.isAfterOperator });
         const right = this.right.toTex({ isAfterOperator: true });
-        return `${left} ${this.symbol} ${right}`;
+        return `${left} ${this.texSymbol} ${right}`;
     };
 
     /**
