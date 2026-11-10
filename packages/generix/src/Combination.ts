@@ -51,7 +51,7 @@ export default class Combination {
 
     /**
      * Generates all possible combinations without repetition of a given array of elements, with the option to specify
-     * the minimum (n) and maximum (m) lengths of the generated permutations.
+     * the minimum (n) and maximum (m) lengths of the generated combinations.
      *
      * @template S - The type of the elements in the input array.
      * @param {Array<S>} elements - The input array containing the elements to generate combination for.
@@ -76,7 +76,7 @@ export default class Combination {
      *
      * @returns {Array<Array<S>>} - An array of arrays, where each inner array is a combination of the input elements.
      */
-    static generateWithRepetition<S>(
+    private static generateWithRepetition<S>(
         elements: S[],
         currentIndexes: number[],
         n: number,
@@ -111,7 +111,7 @@ export default class Combination {
 
     /**
      * Generates all possible combinations with repetition of a given array of elements, with the option to specify
-     * the minimum (n) and maximum (m) lengths of the generated permutations.
+     * the minimum (n) and maximum (m) lengths of the generated combinations.
      *
      * @template S - The type of the elements in the input array.
      * @param {Array<S>} elements - The input array containing the elements to generate combination for.

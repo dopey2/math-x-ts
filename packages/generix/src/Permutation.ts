@@ -71,9 +71,9 @@ export default class Permutation {
      * @returns {Array<Array<S>>} An array of arrays containing all the possible permutations.
      *
      * @example
-     * // Generate permutations with repetition for the elements 'a', 'b', and 'c', with a size between 2 and 3
-     * const result = Permutations.withRepetition(['a', 'b', 'c'], 2, 3);
-     * [['a', 'a'], ['a', 'b'], ['a', 'c'], ['b', 'b'], ['b', 'c'], ['c', 'c'], ['a', 'a', 'a'], ['a', 'a', 'b'], ...]
+     * // Permutations with repetition of 'a', 'b', 'c', with a length between 2 and 3 (9 + 27 = 36 results)
+     * const result = Permutation.withRepetition(['a', 'b', 'c'], 2, 3);
+     * // [['a', 'a'], ['a', 'b'], ['a', 'c'], ['b', 'a'], ['b', 'b'], ..., ['c', 'c'], ['a', 'a', 'a'], ['a', 'a', 'b'], ...]
      */
     static withRepetition <S>(elements: Array<S>, n: number = elements.length, m: number = n): Array<Array<S>> {
         const combinations: Array<Array<S>> = [];
