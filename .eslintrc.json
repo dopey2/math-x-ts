@@ -6,7 +6,6 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "@typescript-eslint/tslint",
     "sort-class-members",
     "import"
   ],
