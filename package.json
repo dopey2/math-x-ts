@@ -58,7 +58,6 @@
     "eslint-plugin-sort-class-members": "^1.15.2",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "netlify-cli": "^15.1.1",
     "puppeteer": "^13.7.0",
     "rimraf": "^3.0.2",
     "standard-version": "^9.5.0",
