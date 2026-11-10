@@ -1,5 +1,5 @@
 import { areCombinationsEqual } from "./common";
-import P from "../src/Permutation";
+import P from "../../src/Permutation";
 
 const SET_A = ['a', 'b', 'c'];
 

@@ -1,6 +1,6 @@
 import { areCombinationsEqual } from "./common";
-import C from "../src/Combination";
-import C_cpp from "../src/node/Combination";
+import C from "../../src/Combination";
+import C_cpp from "../../src/node/Combination";
 
 const SET_A = ['a','b','c', 'd', 'e'];
 
