@@ -10,13 +10,13 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build:clean": "rimraf lib",
+    "clean:lib": "rimraf lib",
     "build:types": "tsc --emitDeclarationOnly --declaration true --outDir lib/types",
     "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
     "build:umd": "webpack --config webpack.config.js",
-    "build": "npm run build:clean && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:umd",
-    "typecheck": "tsc --noEmit",
+    "build": "npm run clean:lib && npm run build:types && npm run build:esm && npm run build:cjs && npm run build:umd",
+    "check:types": "tsc --noEmit",
     "lint": "eslint ./src/**/*",
     "lint:fix": "eslint ./src/**/* --fix",
     "test:unit": "jest --verbose",
@@ -24,7 +24,7 @@
     "test:browser": "jest --roots __tests_browser --detectOpenHandles --verbose",
     "test:source": "npm run test:unit && npm run test:specs",
     "test": "npm run test:source && npm run test:browser",
-    "check": "npm run typecheck && npm run lint && npm run test",
+    "check:all": "npm run check:types && npm run lint && npm run test",
     "coverage": "c8 npm run test:source",
     "npm:publish": "npm publish --access public"
   },

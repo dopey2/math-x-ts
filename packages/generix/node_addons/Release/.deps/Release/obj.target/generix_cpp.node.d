@@ -1,0 +1,1 @@
+cmd_Release/obj.target/generix_cpp.node := g++ -o Release/obj.target/generix_cpp.node -shared -pthread -rdynamic -m64  -Wl,-soname=generix_cpp.node -Wl,--start-group Release/obj.target/generix_cpp/cpp/main.o Release/obj.target/generix_cpp/cpp/combination/combination.o Release/obj.target/../../node_modules/node-addon-api/nothing.a -Wl,--end-group 

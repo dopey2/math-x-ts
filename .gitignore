@@ -23,3 +23,6 @@ draft/
 packages/**/lib
 # Local Netlify folder
 .netlify
+
+# Coverage reports
+.coverage/

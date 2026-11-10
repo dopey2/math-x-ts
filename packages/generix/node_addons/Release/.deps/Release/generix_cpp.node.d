@@ -1,0 +1,1 @@
+cmd_Release/generix_cpp.node := ln -f "Release/obj.target/generix_cpp.node" "Release/generix_cpp.node" 2>/dev/null || (rm -rf "Release/generix_cpp.node" && cp -af "Release/obj.target/generix_cpp.node" "Release/generix_cpp.node")
