@@ -28,13 +28,13 @@ export default class Permutation {
 
         for(let i = 0; i < elements.length; i++) {
             const element = elements[i];
-            const rest = [...elements.slice(0, i), ...elements.slice(i + 1, elements.length)];
             combo.push(element);
 
             if(combo.length >= n && combo.length <= m) {
                 result.push([...combo]);
             }
-            if(combo.length <= m) {
+            if(combo.length < m) {
+                const rest = [...elements.slice(0, i), ...elements.slice(i + 1, elements.length)];
                 result.push(...Permutation.generateWithoutRepetition(rest, n, m, combo));
             }
 
